@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MD Sandbox</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+
+    <string-array name="planets">
+        <item>Planet 1</item>
+        <item>Planet 2</item>
+        <item>Planet 3</item>
+        <item>Planet 4</item>
+        <item>Planet 5</item>
+    </string-array>
+    <string-array name="socialSites">
+        <item>Facebook</item>
+        <item>Twitter</item>
+        <item>Instagram</item>
+        <item>LinkedIn</item>
+        <item>Google+</item>
+    </string-array>
+
+    <!-- For the Random Quotes database app -->
+    <string name="Quote">Please Enter A Quote:</string>
+    <string name="press">Press Me!</string>
+    <string name="genRan">Generate Random Quote!</string>
+    <!-- For the Enhanced Quotes database app -->
+    <string name="no_quotes">No Quotes Yet</string>
+    <string name="menu_insert">Add Quote</string>
+    <string name="menu_delete">Delete Quote</string>
+    <string name="title">Quote:</string>
+    <string name="confirm">Confirm</string>
+    <string name="edit_quotes">Edit Quote</string>
+    
+    <!-- For the flexible ui with fragments project -->
+    <string-array name="chapters">
+        <item>Activities</item>
+        <item>Services</item>
+        <item>Content Providers</item>
+        <item>Intents and Intent Filters</item>
+    </string-array>
+    <string-array name="chDescriptions">
+        <item>Android provides a rich application framework that allows you to build innovative apps and games for mobile devices in a Java language environment. The documents listed in the left navigation provide details about how to build apps using Android\'s various APIs.</item>
+        <item>Android apps are built as a combination of distinct components that can be invoked individually. For instance, an individual activity provides a single screen for a user interface, and a service independently performs work in the background.
+
+From one component you can start another component using an intent. You can even start a component in a different app, such an activity in a maps app to show an address. This model provides multiple entry points for a single app and allows any app to behave as a user\'s "default" for an action that other apps may invoke.</item>
+        <item>Android provides an adaptive app framework that allows you to provide unique resources for different device configurations. For example, you can create different XML layout files for different screen sizes and the system determines which layout to apply based on the current device\'s screen size.
+
+You can query the availability of device features at runtime if any app features require specific hardware such as a camera. If necessary, you can also declare features your app requires so app markets such as Google Play Store do not allow installation on devices that do not support that feature.</item>
+        <item>If you\'re new to Android development, it\'s important that you understand the following fundamental concepts about the Android app framework:</item>
+    </string-array>
+
+    <!-- For the File Spinner -->
+    <string-array name="fileSpinner">
+        <item>Shared Preferences</item>
+        <item>Cache</item>
+        <item>Internal File</item>
+        <item>External File</item>
+    </string-array>
+
+</resources>

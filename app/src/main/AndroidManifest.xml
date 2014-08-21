@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.MDstudios.mdsandbox" >
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+
+        <activity
+            android:name=".SlideTabActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".DrawerActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivitySharedPrefTest"
+            android:label="Shared Prefs Test [A]"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivitySharedPrefTestB"
+            android:label="Shared Prefs Test [B]"
+            android:parentActivityName=".ActivitySharedPrefTest"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivitySharedPrefTest"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityInternalFileTestA"
+            android:label="Internal File Test [A]"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityInternalFileTestB"
+            android:label="Internal File Test [B]"
+            android:parentActivityName=".ActivityInternalFileTestA"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityInternalFileTestA"
+                />
+        </activity>
+        <activity
+            android:name=".QuotesActivityMain"
+            android:label="Random Quotes"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".QuotesEnActivityMain"
+            android:label="Enhanced Quotes"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".QuotesEnActivityEdit"
+            android:label="Enhanced Quotes" >
+        </activity>
+        <activity
+            android:name=".ITrackerActivityMain"
+            android:label="Information Tracker"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityGridViewTest"
+            android:label="Gridview Test"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityFlexibleUIFrags"
+            android:label="Flexible UI With Frags"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityFlexibleUIFragsB"
+            android:label="Flexible UI With Frags [B]"
+            android:parentActivityName=".ActivityFlexibleUIFrags"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityFlexibleUIFrags"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityCacheTestA"
+            android:label="Cache Test [A]"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityCacheTestB"
+            android:label="Cache Test [B]"
+            android:parentActivityName=".ActivityCacheTestA"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityCacheTestA"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityExtFileTestA"
+            android:label="External Files Test [A]"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityExtFileTestB"
+            android:label="External Files Test [B]"
+            android:parentActivityName=".ActivityExtFileTestA"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityExtFileTestA"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityFileSpinnerTestA"
+            android:label="File Spinner Test [A]"
+            android:parentActivityName=".HomeActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"
+                />
+        </activity>
+        <activity
+            android:name=".ActivityFileSpinnerTestB"
+            android:label="File Spinner Test [B]"
+            android:parentActivityName=".ActivityFileSpinnerTestA"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityFileSpinnerTestA"
+                />
+        </activity>
+
+    </application>
+
+</manifest>

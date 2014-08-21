@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue226">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="4dp"
+                android:text="To Main"
+                android:background="#FFF"
+                android:textColor="#000"
+                android:id="@+id/buttonToMain"
+                android:onClick="ToMain"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="4dp"
+                android:text="To Swipe Tabs"
+                android:background="#000"
+                android:textColor="#FFF"
+                android:id="@+id/buttonToTab"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/buttonToMain"
+                android:layout_toEndOf="@+id/buttonToMain"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="To Drawer"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:id="@+id/buttonToDrawer"
+                android:layout_toEndOf="@+id/buttonToMain"
+                android:layout_below="@+id/buttonToMain"
+                android:layout_alignLeft="@+id/buttonToMain"
+                android:layout_alignStart="@+id/buttonToMain"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="To Shared Prefs"
+                android:background="@color/dev_orange"
+                android:textColor="#FFF"
+                android:id="@+id/buttonToPrefs"
+                android:layout_below="@+id/buttonToMain"
+                android:layout_alignLeft="@+id/buttonToTab"
+                android:layout_marginLeft="20dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To File Edit"
+                android:background="@color/dev_orange"
+                android:textColor="#FFF"
+                android:id="@+id/buttonToFile"
+                android:layout_below="@+id/buttonToDrawer"
+                android:layout_alignLeft="@+id/buttonToDrawer"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="N/A"
+                android:background="#000"
+                android:textColor="#FFF"
+                android:id="@+id/buttonNA"
+                android:layout_below="@+id/buttonToDrawer"
+                android:layout_alignLeft="@+id/buttonToPrefs"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Random Quotes!"
+                android:background="@color/dev_green"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToQuotes"
+                android:layout_below="@+id/buttonToFile"
+                android:layout_alignLeft="@+id/buttonToDrawer"
+                 />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Cache Test!"
+                android:background="@color/dev_orange"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToCache"
+                android:layout_below="@+id/buttonToFile"
+                android:layout_toRightOf="@+id/buttonToQuotes"
+                android:layout_marginLeft="20dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Enhanced Quotes!"
+                android:background="@color/dev_green"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToQuotesEn"
+                android:layout_below="@+id/buttonToQuotes"
+                android:layout_alignLeft="@+id/buttonToDrawer"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Ext File Test!"
+                android:background="@color/dev_orange"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToExtFile"
+                android:layout_below="@+id/buttonToQuotes"
+                android:layout_alignLeft="@+id/buttonToCache"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Information Tracker!"
+                android:background="@color/dev_green"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToITracker"
+                android:layout_below="@+id/buttonToQuotesEn"
+                android:layout_alignLeft="@+id/buttonToDrawer"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Grid Test!"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToGrid"
+                android:layout_below="@+id/buttonToITracker"
+                android:layout_alignLeft="@+id/buttonToDrawer"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Flexible UI Test!"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToFlexUI"
+                android:layout_below="@+id/buttonToITracker"
+                android:layout_alignLeft="@+id/buttonToPrefs"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="To Spinner File Test!"
+                android:background="@color/dev_orange"
+                android:textColor="@color/white"
+                android:id="@+id/buttonToSpinner"
+                android:layout_below="@+id/buttonToGrid"
+                android:layout_alignLeft="@+id/buttonToDrawer"
+                />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/drawerList"
+        android:background="@color/dev_orange"
+        android:divider="@null"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        ></ListView>
+
+</android.support.v4.widget.DrawerLayout>
