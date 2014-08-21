@@ -32,7 +32,7 @@ public class ITrackerDBAdapter {
     private static final int DATABASE_VERSION = 1;
 
     private static final String DATABASE_CREATE =
-            "create table tblRewards (_id integer primary key autoincrement, "
+            "create table "+DATABASE_TABLE+" (_id integer primary key autoincrement, "
                     + "YearOfRewards text not null, MonthOfRewards text not null," +
                     "DayOfRewards text not null," +
                     " NumOfRewards int not null );";
@@ -101,7 +101,7 @@ public class ITrackerDBAdapter {
     public int getAllRewards()
     {
         Cursor cursor = db.rawQuery(
-                "SELECT SUM(NumOfRewards) FROM tblRewards", null);
+                "SELECT SUM(NumOfRewards) FROM "+DATABASE_TABLE, null);
         if(cursor.moveToFirst()) {
             return cursor.getInt(0);
         }

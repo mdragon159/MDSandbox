@@ -26,4 +26,10 @@
         android:layout_height="wrap_content"
         android:text="@string/genRan"
         />
+    <Button
+        android:onClick="deleteAll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete All Data"
+        />
 </LinearLayout>

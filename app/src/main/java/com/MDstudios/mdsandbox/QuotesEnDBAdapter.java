@@ -25,13 +25,12 @@ public class QuotesEnDBAdapter {
     /**
      * Database creation sql statement
      */
+      private static final String DATABASE_NAME = "Random";
+    private static final String DATABASE_TABLE = "tblRandomQuotesEn";
     private static final String DATABASE_CREATE =
-            "create table tblRandomQuotes (_id integer primary key autoincrement, "
+            "create table "+DATABASE_TABLE+" (_id integer primary key autoincrement, "
                     + "quotes text not null);";
-
-    private static final String DATABASE_NAME = "Random";
-    private static final String DATABASE_TABLE = "tblRandomQuotes";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 1;
 
     private final Context mCtx;
 
@@ -51,7 +50,7 @@ public class QuotesEnDBAdapter {
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
                     + newVersion + ", which will destroy all old data");
-            db.execSQL("DROP TABLE IF EXISTS tblRandomQuotes");
+            db.execSQL("DROP TABLE IF EXISTS "+DATABASE_TABLE);
             onCreate(db);
         }
     }
@@ -126,7 +125,7 @@ public class QuotesEnDBAdapter {
     public int getAllEntries()
     {
         Cursor cursor = mDb.rawQuery(
-                "SELECT COUNT(quotes) FROM tblRandomQuotes", null);
+                "SELECT COUNT(quotes) FROM "+DATABASE_TABLE, null);
         if(cursor.moveToFirst()) {
             return cursor.getInt(0);
         }
@@ -141,7 +140,7 @@ public class QuotesEnDBAdapter {
 
         int rand = random.nextInt(id) + 1;
         Cursor cursor = mDb.rawQuery(
-                "SELECT quotes FROM tblRandomQuotes WHERE _id = " + rand, null);
+                "SELECT quotes FROM "+DATABASE_TABLE+" WHERE _id = " + rand, null);
         if(cursor.moveToFirst()) {
             return cursor.getString(0);
         }

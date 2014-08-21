@@ -31,6 +31,14 @@ public class QuotesActivityMain extends Activity {
         getButton.setOnClickListener(mAddListener);
     }
 
+    public void deleteAll(View view){
+        db.open();
+        db.deleteAll();
+        db.close();
+        Toast.makeText(this,"Successfully deleted all db data",Toast.LENGTH_SHORT).show();
+
+    }
+
     // Create an anonymous implementation of OnClickListener
     private View.OnClickListener mAddListener = new View.OnClickListener()
     {
@@ -39,6 +47,7 @@ public class QuotesActivityMain extends Activity {
             switch(v.getId())
             {
                 case R.id.go:
+
                     db.open();
                     long id = 0;
                     // do something when the button is clicked

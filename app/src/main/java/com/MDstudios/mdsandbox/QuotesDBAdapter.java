@@ -113,10 +113,12 @@ public class QuotesDBAdapter {
     //---returns a random string from the database---
     public String getRandomEntry()
     {
-
+/*
         id = getAllEntries();
         Random random = new Random();
         int rand = random.nextInt(getAllEntries()); // TODO: Shhorten this?
+
+        Log.d("MD","getRandomEntry: id = "+id+" | rand = "+rand);
 
         // ??? Purpose? Can databases not handle 0?
         if(rand == 0)
@@ -131,6 +133,19 @@ public class QuotesDBAdapter {
             return cursor.getString(0);
         }
         return cursor.getString(0);
+*/
 
+        // Can also do db.rawQuery("SELECT * FROM mainTable ORDER BY RANDOM() LIMIT 1", null);
+        String[] columns = {KEY_QUOTE};
+        Cursor cursor = db.query(DATABASE_TABLE,columns,
+                null, null, null, null, "RANDOM()","1");
+        if(cursor.moveToFirst()) {
+            return cursor.getString(0);
+        }
+        return cursor.getString(0);
+    }
+
+    public void deleteAll(){
+        db.delete(DATABASE_TABLE,null,null);
     }
 }

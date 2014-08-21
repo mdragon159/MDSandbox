@@ -10,10 +10,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Jawad Nasser on 8/10/2014.
@@ -74,9 +78,11 @@ public class QuotesEnActivityMain extends ListActivity {
     };
 
     private void fillData() {
+        /*
+        // Initial, deprecated method
         // Get all of the rows from the database and create the item list
         mNotesCursor = mDbHelper.fetchAllQuotes();
-        startManagingCursor(mNotesCursor);
+        startManagingCursor(mNotesCursor); // Activity closes cursor
 
         // Create an array to specify the fields we want to display in the list (only TITLE)
         String[] from = new String[]{QuotesEnDBAdapter.KEY_QUOTES};
@@ -88,6 +94,35 @@ public class QuotesEnActivityMain extends ListActivity {
         SimpleCursorAdapter notes =
                 new SimpleCursorAdapter(this, R.layout.row_simple, mNotesCursor, from, to);
         setListAdapter(notes);
+        */
+
+
+        // Get all the data in a cursor
+        Cursor cursor = mDbHelper.fetchAllQuotes();
+
+        // Loop through all of the data and add to a list
+        List<String> quotesList = new ArrayList<String>();
+        if(cursor.moveToFirst()){
+            // Get which column the quotes belong in
+            int quoteIndex = cursor.getColumnIndex(mDbHelper.KEY_QUOTES);
+            do{
+                // First get the current quote from the cursor
+                String quote = cursor.getString(quoteIndex);
+
+                // Then add the data to the list
+                quotesList.add(quote);
+            } while(cursor.moveToNext());
+        }
+
+
+        // Convert list to string array
+    //    String[] quotesData = quotesList.toArray(new String[quotesList.size()]);
+
+        // Create an array adapter to use with listView
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.row_simple,quotesList);
+
+        setListAdapter(adapter);
+
     }
 
     @Override
