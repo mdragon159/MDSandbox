@@ -246,6 +246,7 @@ public class HomeActivity extends Activity implements View.OnClickListener, Adap
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
+            /* Original
             View row = null;
             if(convertView == null){
                 LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -262,7 +263,36 @@ public class HomeActivity extends Activity implements View.OnClickListener, Adap
             titleImageView.setImageResource(images[position]);
 
             return row;
+            */
+
+            // Further optimized
+            View row = convertView;
+            ViewHolder holder = null;
+
+            if(row == null){
+                LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                row = inflater.inflate(R.layout.custom_row, parent, false);
+                holder = new ViewHolder(row);
+                row.setTag(holder);
+            }
+            else {
+                holder = (ViewHolder) row.getTag();
+            }
+
+            holder.mImageView.setImageResource(images[position]);
+            holder.mTextView.setText(socialSites[position]);
+
+            return row;
         }
     }
 
+    class ViewHolder{
+        ImageView mImageView;
+        TextView mTextView;
+
+        ViewHolder(View view){
+            mImageView = (ImageView) view.findViewById(R.id.imageView1);
+            mTextView = (TextView) view.findViewById(R.id.textView1);
+        }
+    }
 }
