@@ -23,7 +23,7 @@ public class QuotesDBAdapter {
 
     private static final String DATABASE_NAME = "Random";
     private static final String DATABASE_TABLE = "tblRandomQuotes";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private static final String DATABASE_CREATE =
             "create table tblRandomQuotes (_id integer primary key autoincrement, "
