@@ -30,7 +30,7 @@ public class QuotesEnDBAdapter {
     private static final String DATABASE_CREATE =
             "create table "+DATABASE_TABLE+" (_id integer primary key autoincrement, "
                     + "quotes text not null);";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private final Context mCtx;
 
